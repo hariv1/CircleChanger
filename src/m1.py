@@ -345,6 +345,13 @@ class CircleChanger(object):
         #   (below).  Third, implement and test this method.
         ################################################################
 
+        for _ in range(times_to_swell_or_shrink):
+            self.swell_or_shrink_once(amount_to_swell_or_shrink)
+            self.draw()
+            self.swell_or_shrink_once(-amount_to_swell_or_shrink)
+            self.draw()
+
+
     def swallow(self, other_circle_changer):
         """
         What comes in:
